@@ -1,0 +1,12 @@
+<div ng-controller="peopleCtrl">
+  <label>Afficher les personnes ?</label>
+  <input type="checkbox" ng-model="showPeople">
+  <ul ng-show="showPeople">
+    <li ng-repeat="person in people">
+      {{ person.firstname }} {{ person.lastname }}
+    </li>
+  </ul>
+  <p ng-hide="showPeople">
+  	Il n'y a personne de visible.
+  </p>
+</div>
